@@ -10,19 +10,31 @@ class ColorBox extends Component {
     }
   }
 
+  static defaultProps = {
+  }
+
   pickRandomColor() {
     // alert('clicked!');
     let pickedColor = this.state.colorArr[Math.floor(Math.random() * 4)];
     console.log(pickedColor);
-    this.setState({
-      background: pickedColor
-    });
+    if (this.state.background !== pickedColor) {
+      this.setState({
+        background: pickedColor
+      });
+    } else {
+      this.pickRandomColor();
+    }
+    
   }
-  static defaultProps = {
-  }
+
   render() {
     return(
-      <div style={{backgroundColor: this.state.background}} onClick={() => this.pickRandomColor()} className="ColorBox"></div>
+      <div 
+        style={{backgroundColor: this.state.background}} 
+        onClick={() => this.pickRandomColor()} 
+        className="ColorBox"
+      />
+
     )
   }
 }

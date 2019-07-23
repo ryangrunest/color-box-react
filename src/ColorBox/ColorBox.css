@@ -1,7 +1,9 @@
 .ColorBox {
-  padding: 0;
-  margin: 0;
   width: 20vw;
-  height: 25vh;
-  /* background-color:blue; */
+  height: 20vh;
+  margin: auto;
+  background: blue;
+}
+.ColorBox:hover {
+  cursor: pointer;
 }
