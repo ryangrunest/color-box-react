@@ -14,7 +14,6 @@ class ColorBox extends Component {
   }
 
   pickRandomColor() {
-    // alert('clicked!');
     let pickedColor = this.state.colorArr[Math.floor(Math.random() * 4)];
     console.log(pickedColor);
     if (this.state.background !== pickedColor) {
@@ -34,7 +33,6 @@ class ColorBox extends Component {
         onClick={() => this.pickRandomColor()} 
         className="ColorBox"
       />
-
     )
   }
 }
